@@ -9,7 +9,9 @@
     </head>
     <body>
         <div id="root">
-            
+            <ul v-for='(email, index) in emailArray'>
+                <li>{{index + 1}}: {{ email }}</li>
+            </ul>
         </div>
         <script src="main.js" charset="utf-8"></script>
     </body>
