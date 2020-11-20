@@ -5,13 +5,24 @@
         <title>Email list</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="root">
-            <ul v-for='(email, index) in emailArray' v-if='emailArray.length == 10'>
-                <li>{{index + 1}}: {{ email }}</li>
-            </ul>
+            <div class="container">
+                <h1 class="title">Email List</h1>
+                <div class="list">
+                    <ul v-if='emailArray.length == 10'>
+                        <li v-for='(email, index) in emailArray'>
+                            <a><i class="fas fa-user-circle"></i>  User{{index + 1}}</a>
+                            <span><i class="fas fa-at"></i> {{ email }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <script src="main.js" charset="utf-8"></script>
     </body>
