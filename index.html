@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="root">
-            <ul v-for='(email, index) in emailArray'>
+            <ul v-for='(email, index) in emailArray' v-if='emailArray.length == 10'>
                 <li>{{index + 1}}: {{ email }}</li>
             </ul>
         </div>
